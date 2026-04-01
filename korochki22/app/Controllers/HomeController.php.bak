@@ -1,0 +1,19 @@
+<?php
+namespace App\Controllers;
+
+use App\Core\Controller;
+
+class HomeController extends Controller
+{
+    public function entry()
+    {
+        $this->redirect('/login');
+    }
+
+    public function index()
+    {
+        $this->view('home/index', [
+            'title' => 'Корочки.есть — портал онлайн-курсов ДПО',
+        ]);
+    }
+}
